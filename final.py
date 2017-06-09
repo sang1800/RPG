@@ -7,6 +7,7 @@ import time
 def Fab():
     append = ("""
     Minotaur
+
     I'm fabulous
 
      .      .
@@ -37,6 +38,7 @@ def Fab():
 def Mac():
     append = ("""
     Snapple computer
+
     You wanna play games on me?
     screw you
                   ____________________________
@@ -63,6 +65,7 @@ def Mac():
 def preacher():
     append = ("""
      Jehovah's witness
+
      would you like to talk about our lord and savior?
                      ___
                     /___\\
@@ -92,6 +95,7 @@ def preacher():
 def Germany():
     append = ("""
      Germany
+
      Germany has attacked!
      again......
  +------------------+
@@ -112,9 +116,10 @@ def Germany():
 
 def Castle():
     append = ("""               
-          The kingdom of SJW 
-          you made one joke about the gays 
-          and offended a whole nation            
+          The Kingdom of SJW 
+            
+          you made one joke about manspreading
+          and offended the whole nation            
                        
                                                     !_
                                                     |*~=-.,
@@ -157,6 +162,7 @@ def Castle():
 def Alien():
     append = ("""       
        Ay Lmao
+
        please stop making that joke, it's very old
                 _____
              ,-"     "-.
@@ -181,7 +187,8 @@ def Alien():
 
 def Imp():
     append = ("""
-    IMP
+    Imp
+
     I'm magical, be scared,
     boooooooooooooooo
        *                       *
@@ -210,6 +217,7 @@ def Imp():
 def Troll():
     append = ("""
         Troll
+
         I'm not the troll on the internet!
                                               ,--,  ,.-.
                 ,                   \,       '-,-`,'-.' | ._
@@ -241,6 +249,7 @@ def Troll():
 def Spider():
     append = (""" 
         Spider
+
         touch me, I dare you            
            /      \\
         \  \  ,,  /  /
@@ -255,6 +264,7 @@ def Spider():
 def Reaper():
     append = ("""
         Reaper
+
         i just wanna hang out with people, why is it so hard?
                                            .""--..__
                      _                     []       ``-.._
@@ -321,7 +331,7 @@ def RandEnemy():
 
 
 def show():
-    print (append)
+    print(append)
 
 class WeirdEnemy:
     def __intit__(self):
@@ -389,9 +399,30 @@ def main():
     elif option == "2":
         main()
     elif option == "3":
-        print("leaving already?")
-        time.sleep(3)
-        sys.exit()
+        print("leaving already?\n")
+        print("1) yes\n2) no\n")
+        pick = input("-->")
+        time.sleep(2)
+        if pick == "1":
+            print("ok then\n")
+            time.sleep(2)
+            print("but are you sure you're leaving?\n")
+            print("1) yes\n2) no\n")
+            pick2 = input("-->")
+            if pick2 == "1":
+                print("okey, bye\n")
+                time.sleep(2)
+                sys.exit()
+            else:
+                print("haha you jokester, you")
+                time.sleep(2)
+                main()
+        else:
+            print("oooooookkkkk")
+            time.sleep(2)
+            main()
+
+        
 
     else:
         main()
@@ -720,7 +751,7 @@ def option():
         \ /      : | |  :    :  ::  /  _./>-
          (__ ))): /_/____.))_____//.-'`
     """)
-    print("1) explore\n2) stand around\n3) sleep\n")
+    print("1) explore\n2) stand around\n3) exit\n")
     choice = input("What you you like to do? ")
     if choice == "1":
         explore()
@@ -731,9 +762,8 @@ def option():
         time.sleep(1)
         option()
     elif choice == "3":
-        print("you went to sleep\n")
-        time.sleep(1)
-        option()
+        os.system('cls')
+        win()
     else:
         option()
  
@@ -924,19 +954,19 @@ def attack():
 def enemyAttack():
     os.system('cls')
     Eattack = random.randint(0, 20)
-    if Eattack < 7:
+    if Eattack < 4:
         os.system('cls')
         show()
         print ("the enemy missed\n")
         time.sleep(1)
         fight()
-    elif Eattack > 7 < 16:
+    elif Eattack > 4 < 10:
         os.system('cls')
         show()
         print ("the enemy deals damage!\n")
         time.sleep(1)
         fight()
-    if Eattack > 19:
+    if Eattack > 10:
         death = random.randint(1,5)
         if death == 1:
             print ("you lived a good life")
@@ -963,15 +993,33 @@ def enemyAttack():
 
 def run():
     os.system('cls')
-    runChance = random.randint(1,2)
+    runChance = random.randint(1,5)
     if runChance == 1:
         print ("you got the hell out of there")
         time.sleep(1)
         option()
+    elif runChance == 2:
+        print("you insulted the enemy")
+        time.sleep(2)
+        print("you made a huge mistake")
+        time.sleep(2)
+        enemyAttack()
+    elif runChance == 3:
+        print("you tried to run away")
+        time.sleep(2)
+        print("you tripped on a walnut and the enemy caught up to you")
+        time.sleep(2)
+        enemyAttack()
+    elif runChance == 4:
+        print("you magically teleported out of the situation")
+        time.sleep(2)
+        print("don't ask how you teleported, you just do")
+        time.sleep(2)
+        option()
     else:
         print ("fight! you lil chicken!")
         time.sleep(1)
-        fight()
+        enemyAttack()
 
 def bossfight():
     append = ("""
